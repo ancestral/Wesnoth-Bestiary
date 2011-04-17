@@ -1,0 +1,25 @@
+Bestiary
+A web site for browsing game and unit information for The Battle for Wesnoth
+
+ancestral
+Last updated: 17 Apr 2011
+
+WHAT IS THIS?
+This is a web site for browsing unit information for a free strategy game called The Battle For Wesnoth. (Not familiar? Check it out at http://www.wesnoth.org) Part of it is an experiment and self-learning to the wonderful ways of JavaScript, jQuery, and web design. As I continue to work on the project, it will eventually replace http://units.wesnoth.org.
+
+WHY HERE?
+Why not? I need a place that's publicly accessible online so I can make edits from various different machines. I also want to make it relatively easy for people to download the files so they can test and debug it themselves.
+
+HOW CAN I HELP?
+There are many things that need to be done, including:
+
+* Generating advancement trees
+* Creating a small UNIX program to parse the JSON output file into smaller files
+* Fix AJAX issues
+* Display and adjust images properly
+* Create a unit browser for eras and campaigns
+* Cleanup and optimize code
+
+WHERE CAN I LEARN MORE?
+Visit the Wesnoth forums, at:
+http://forums.wesnoth.org/viewtopic.php?f=6&t=29138
