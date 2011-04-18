@@ -128,10 +128,10 @@
   	var resistances = ["blade", "pierce", "impact", "fire", "cold", "arcane"];
 
   	for (var i in resistances)
-  	{ $('#'+resistances[i]).html(100 - (resistanceData.resistance[0][resistances[i]]) + "%");
+  	{ $('#'+resistances[i]).html(100 - (resistanceData.resistance[0][resistances[i]]).replace(/-/,"−") + "%");
   	  if (unitData.resistance != null)
   	  { if (unitData.resistance[0][resistances[i]] != null)
-  		  { $('#'+resistances[i]).html(100 - (unitData.resistance[0][resistances[i]]) + "%"); 	
+  		  { $('#'+resistances[i]).html(100 - (unitData.resistance[0][resistances[i]]).replace(/-/,"−") + "%"); 	
   		  }
   		}
 	  }
@@ -141,7 +141,7 @@
   	for (var i in defenses)
   	{ if (resistanceData.defense != null)
   	  { if (resistanceData.defense[0][defenses[i]])
-      	{ $('#'+defenses[i]+' .percent').html(100 - (resistanceData.defense[0][defenses[i]]) + "%");
+      	{ $('#'+defenses[i]+' .percent').html(100 - (resistanceData.defense[0][defenses[i]]).replace(/-/,"−") + "%");
       	  $('#'+defenses[i]+' .movement').html(resistanceData.movement_costs[0][defenses[i]]);
         }
         else
@@ -151,7 +151,7 @@
   	  }
     	if (unitData.defense != null)
     	{ if (unitData.defense[0][defenses[i]] != null)
-        { $('#'+defenses[i]+' .percent').html(100 - (unitData.defense[0][defenses[i]]) + "%");
+        { $('#'+defenses[i]+' .percent').html(100 - (unitData.defense[0][defenses[i]]).replace(/-/,"−") + "%");
         }
       }
       
