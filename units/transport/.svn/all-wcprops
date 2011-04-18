@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/wesnoth/!svn/ver/48839/trunk/data/core/images/units/transport
+END
+galleon.png
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/wesnoth/!svn/ver/48839/trunk/data/core/images/units/transport/galleon.png
+END
+pirate-galleon.png
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wesnoth/!svn/ver/48839/trunk/data/core/images/units/transport/pirate-galleon.png
+END
+boat.png
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/wesnoth/!svn/ver/48839/trunk/data/core/images/units/transport/boat.png
+END
+transport-galleon.png
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/wesnoth/!svn/ver/48839/trunk/data/core/images/units/transport/transport-galleon.png
+END

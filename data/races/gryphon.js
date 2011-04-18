@@ -1,0 +1,1 @@
+{"id":"gryphon","male_name":"race^Gryphon","female_name":"race+female^Gryphon","plural_name":"race^Gryphons","description":"","num_traits":"2","male_names":"Graa,Greaa,Gree,Kaaa,Kassshh,Kessshh,Korro,Kraa,Kuu,Kzaaa,Kzuuu","female_names":"Kaasa,Kayya,Keyya,Kiira,Korra"}

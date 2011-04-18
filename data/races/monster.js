@@ -1,0 +1,1 @@
+{"id":"monster","name":"race^Monster","plural_name":"race^Monsters","description":"The term \u201cmonster\u201d incorporates many hideous beasts that haunt the caves, wilderness, ocean depths, and other climes of the world. They figure largely in the tales and nightmares of its denizens, as well.","num_traits":"0"}

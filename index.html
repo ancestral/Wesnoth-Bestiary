@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wesnoth Bestiary</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/tome.css" />
+  <link rel="shortcut icon" href="images/wesnoth-icon.png" />
+  <script type="text/javascript" language="javascript" src="scripts/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" language="javascript" src="scripts/jquery.tablesorter.min.js"></script>
+	<script type="text/javascript" language="javascript" src="scripts/layout.js"></script>
+</head>
+
+<body class="bestiary">
+<div id="container">
+	<div id="header">
+	</div>
+	<div id="nav">
+	  <ul>
+			<li><a href="http://www.wesnoth.org/">Home</a></li>
+	    <li><a href="http://wiki.wesnoth.org/Download">Download</a></li>
+	    <li><a href="http://www.mproud.com/wesnoth/bestiary/">Bestiary</a></li>
+	    <li><a href="http://wiki.wesnoth.org/">Wiki</a></li>
+	    <li><a href="http://forums.wesnoth.org/">Forums</a></li>
+	    <li><a href="http://wiki.wesnoth.org/Support">Support</a></li>
+			<li><a href="http://wiki.wesnoth.org/UsefulLinks">Links</a></li>
+	  </ul>
+	</div>
+
+<select><option>ancient_lich</option> <option>ancient_wose</option> <option>arch_mage</option> <option>armageddon_drake</option> <option>assassin</option> <option>bandit</option> <option>banebow</option> <option>blood_bat</option> <option>boat</option> <option>bone_shooter</option> <option>bowman</option> <option>cavalier</option> <option>cavalryman</option> <option>chocobone</option> <option>cuttle_fish</option> <option>dark_adept</option> <option>dark_sorcerer</option> <option>death_knight</option> <option>deathblade</option> <option>direwolf_rider</option> <option>dragoon</option> <option>drake_arbiter</option> <option>drake_blademaster</option> <option>drake_burner</option> <option>drake_clasher</option> <option>drake_enforcer</option> <option>drake_fighter</option> <option>drake_flameheart</option> <option>drake_flare</option> <option>drake_glider</option> <option>drake_thrasher</option> <option>drake_warden</option> <option>drake_warrior</option> <option>draug</option> <option>dread_bat</option> <option>duelist</option> <option>dwarvish_arcanister</option> <option>dwarvish_berserker</option> <option>dwarvish_dragonguard</option> <option>dwarvish_explorer</option> <option>dwarvish_fighter</option> <option>dwarvish_guardsman</option> <option>dwarvish_lord</option> <option>dwarvish_pathfinder</option> <option>dwarvish_runemaster</option> <option>dwarvish_runesmith</option> <option>dwarvish_scout</option> <option>dwarvish_sentinel</option> <option>dwarvish_stalwart</option> <option>dwarvish_steelclad</option> <option>dwarvish_thunderer</option> <option>dwarvish_thunderguard</option> <option>dwarvish_ulfserker</option> <option>elder_mage</option> <option>elder_wose</option> <option>elvish_archer</option> <option>elvish_avenger</option> <option>elvish_captain</option> <option>elvish_champion</option> <option>elvish_druid</option> <option>elvish_enchantress</option> <option>elvish_fighter</option> <option>elvish_hero</option> <option>elvish_high_lord</option> <option>elvish_lady</option> <option>elvish_lord</option> <option>elvish_marksman</option> <option>elvish_marshal</option> <option>elvish_outrider</option> <option>elvish_ranger</option> <option>elvish_rider</option> <option>elvish_scout</option> <option>elvish_shaman</option> <option>elvish_sharpshooter</option> <option>elvish_shyde</option> <option>elvish_sorceress</option> <option>elvish_sylph</option> <option>fencer</option> <option>fire_dragon</option> <option>fire_drake</option> <option>fire_guardian</option> <option>fog_clearer</option> <option>footpad</option> <option>fugitive</option> <option>galleon</option> <option>general</option> <option>ghast</option> <option>ghost</option> <option>ghoul</option> <option>giant_mudcrawler</option> <option>giant_rat</option> <option>giant_scorpion</option> <option>giant_spider</option> <option>goblin_impaler</option> <option>goblin_knight</option> <option>goblin_pillager</option> <option>goblin_rouser</option> <option>goblin_spearman</option> <option>grand_knight</option> <option>grand_marshal</option> <option>great_mage</option> <option>great_troll</option> <option>gryphon</option> <option>gryphon_master</option> <option>gryphon_rider</option> <option>halberdier</option> <option>heavy_infantryman</option> <option>highwayman</option> <option>horseman</option> <option>huntsman</option> <option>hurricane_drake</option> <option>inferno_drake</option> <option>iron_mauler</option> <option>javelineer</option> <option>knight</option> <option>lancer</option> <option>lich</option> <option>lieutenant</option> <option>longbowman</option> <option>mage</option> <option>mage_of_light</option> <option>master_at_arms</option> <option>master_bowman</option> <option>mermaid_diviner</option> <option>mermaid_enchantress</option> <option>mermaid_initiate</option> <option>mermaid_priestess</option> <option>mermaid_siren</option> <option>merman_entangler</option> <option>merman_fighter</option> <option>merman_hoplite</option> <option>merman_hunter</option> <option>merman_javelineer</option> <option>merman_netcaster</option> <option>merman_spearman</option> <option>merman_triton</option> <option>merman_warrior</option> <option>mudcrawler</option> <option>naga_fighter</option> <option>naga_myrmidon</option> <option>naga_warrior</option> <option>necromancer</option> <option>necrophage</option> <option>nightgaunt</option> <option>ogre</option> <option>orcish_archer</option> <option>orcish_assassin</option> <option>orcish_crossbowman</option> <option>orcish_grunt</option> <option>orcish_leader</option> <option>orcish_ruler</option> <option>orcish_slayer</option> <option>orcish_slurbow</option> <option>orcish_sovereign</option> <option>orcish_warlord</option> <option>orcish_warrior</option> <option>outlaw</option> <option>paladin</option> <option>peasant</option> <option>pikeman</option> <option>pirate_galleon</option> <option>poacher</option> <option>ranger</option> <option>red_mage</option> <option>revenant</option> <option>rogue</option> <option>royal_guard</option> <option>royal_warrior</option> <option>ruffian</option> <option>saurian_ambusher</option> <option>saurian_augur</option> <option>saurian_flanker</option> <option>saurian_oracle</option> <option>saurian_skirmisher</option> <option>saurian_soothsayer</option> <option>sea_serpent</option> <option>sergeant</option> <option>shadow</option> <option>shock_trooper</option> <option>silver_mage</option> <option>skeletal_dragon</option> <option>skeleton</option> <option>skeleton_archer</option> <option>sky_drake</option> <option>soulless</option> <option>spearman</option> <option>spectre</option> <option>swordsman</option> <option>tentacle_of_the_deep</option> <option>thief</option> <option>thug</option> <option>transport_galleon</option> <option>trapper</option> <option>troll</option> <option>troll_hero</option> <option>troll_rocklobber</option> <option>troll_shaman</option> <option>troll_warrior</option> <option>troll_whelp</option> <option>vampire_bat</option> <option>walking_corpse</option> <option>water_serpent</option> <option>white_mage</option> <option>wolf</option> <option>wolf_rider</option> <option>woodsman</option> <option>wose</option> <option>wraith</option> <option>yeti</option> <option>young_ogre</option></select>
+
+<div id="content">
+<div id="main">
+  <h2 id ="title"></h2>
+  <div id="description"><p></p></div>
+  <div id="statblock">
+    <h3>Statistics</h3>
+    <table id="meta" cellpadding="0" cellspacing="0"><tbody>
+      <tr><th>     Race<td id="race">
+      <tr><th>Alignment<td id="alignment">
+    </table>
+    <br />
+    <table id="numbers" cellpadding="0" cellspacing="0"><tbody>
+      <tr><th>    Level<td id="level">
+      <tr><th>     Cost<td id="cost">
+      <tr><th>       HP<td id="hp">
+      <tr><th> Movement<td id="movement">
+      <tr><th>       XP<td id="xp">
+    </table>
+  </div>
+  
+  <div id="attacks">
+    <h3>Attacks</h3>
+  </div>
+
+  <div id="resistances">
+    <h3>Resistances</h3>
+    <table id="resistances" cellpadding="0" cellspacing="0"><tbody>
+      <tr><th class="blade">   Blade   <td id="blade" class="atk2">
+      <tr><th class="pierce">  Pierce  <td id="pierce" class="atk2">
+      <tr><th class="impact">  Impact  <td id="impact" class="atk2">
+      <tr><th class="fire">    Fire    <td id="fire" class="atk2">
+      <tr><th class="cold">    Cold    <td id="cold" class="atk2">
+      <tr><th class="arcane">  Arcane  <td id="arcane" class="atk2">
+    </table>
+  </div>
+</div>
+
+<div id="portrait" style="">
+
+  <img id="pic1" class="opaque" />
+
+<!-- ?php echo  $unitcfgs[$umap[$get]]->{'portrait'}[0]->{'image'}; 
+	  echo "\" />";
+    if ($unitcfgs[$umap[$get]]->{'female'}[0]->{'portrait'}[0]->{'image'})
+		{	echo "<img id=\"pic2\" src=\"";
+			echo $unitcfgs[$umap[$get]]->{'female'}[0]->{'portrait'}[0]->{'image'};
+			echo "\" />";
+		}
+	? -->
+</div>
+
+<div id="sidebar">
+  <!--p><span id="portrait1">1</span -->
+		<!-- ?php if ($unitcfgs[$umap[$get]]->{'female'}[0]->{'portrait'}[0]->{'image'})
+			{	echo "<span id=\"portrait2\">2</span>";
+			}
+		?
+	</p -->
+  <div id="advancement">
+    <h3>Advancement</h3>
+		<!-- ul>
+			< ?php echo "<li id=\"_";
+			echo str_replace(" ","_",trim($unitcfgs[$umap[$get]]->{'name'}));
+			echo "\" class=\"at\" style=\"background-image: url(";
+			echo $unitcfgs[$umap[$get]]->{'image'};
+			echo ")\"><br />";
+			echo $unitcfgs[$umap[$get]]->{'name'};
+			echo "</li>";
+			
+		  if(isset($filenames[0]))
+			{ foreach ($filenames as $item)
+			  { $id = getID($item);
+				  if ($id != "null")
+				  { $adv_contents = file_get_contents("$id.js");
+			      $img = json_decode($adv_contents)->{'image'};
+		        echo "<li id=\"_$id\" class=\"to\" style=\"background-image: url($img)\">
+				    <br />$item</li>";
+				  }
+				}
+			}
+			?>
+		</ul -->
+  </div>
+  <div id="terrain">
+    <h3>Terrain Adjustments</h3>
+    <table id="terraintypes" class="tablesorter {sortList: [[0,0]]}" cellpadding="0" cellspacing="0">
+      <thead>
+        <tr>
+          <th class="terrain"></th>
+          <th class="percent"><strong>Defense</strong></th>
+          <th class="movement"><strong>Movement</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="castle">       <td class="terrain">Castle</td><td class="percent"><td class="movement"></tr>
+        <tr id="cave">         <td class="terrain">Cave</td><td class="percent"><td class="movement"></tr>
+        <tr id="reef">         <td class="terrain">Coastal Reef</td><td class="percent"><td class="movement"></tr>
+        <tr id="deep_water">   <td class="terrain">Deep Water</td><td class="percent"><td class="movement"></tr>
+        <tr id="flat">         <td class="terrain">Flat</td><td class="percent"><td class="movement"></tr>
+  		  <tr id="forest">       <td class="terrain">Forest</td><td class="percent"><td class="movement"></tr>
+        <tr id="frozen">       <td class="terrain">Frozen</td><td class="percent"><td class="movement"></tr>
+        <tr id="hills">        <td class="terrain">Hills</td><td class="percent"><td class="movement"></tr>
+        <tr id="impassable">   <td class="terrain">Impassable</td><td class="percent"><td class="movement"></tr>
+        <tr id="mountains">    <td class="terrain">Mountains</td><td class="percent"><td class="movement"></tr>
+        <tr id="fungus">       <td class="terrain">Mushroom Grove</td><td class="percent"><td class="movement"></tr>
+        <tr id="sand">         <td class="terrain">Sand</td><td class="percent"><td class="movement"></tr>
+        <tr id="shallow_water"><td class="terrain">Shallow Water</td><td class="percent"><td class="movement"></tr> 
+        <tr id="swamp_water">  <td class="terrain">Swamp</td><td class="percent"><td class="movement"></tr>
+        <tr id="unwalkable">   <td class="terrain">Unwalkable</td><td class="percent"><td class="movement"></tr>
+        <tr id="village">      <td class="terrain">Village</td><td class="percent"><td class="movement"></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div id="footer">
+  <img id="img"></img>
+</div>
+</div>
+</div>
+<div id="end"></div>
+</body>
+</html>

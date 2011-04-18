@@ -1,0 +1,22 @@
+Instructions for updating Bestiary with a new release
+
+1. Copy the following directories from your Wesnoth installation or source, placing them in their like folders (remember NOT to place them in the Bestiary images folder):
+
+* From data/core/images/attacks/ to "attacks"
+* From data/core/images/icons/ to "icons"
+* From data/core/images/portraits/ to "portraits"
+* From data/core/images/units/ to "units"
+
+2. To minimize the size, feel free to delete unused portrait files. All images not in the transparent folder in "portraits/<race>/" are okay to delete.
+
+3. Run wmlparser2. This requires a built version of Wesnoth. (Depending on the situation, it may be possible to combine an older build of Wesnoth with newer data files, otherwise you should stick to a full build or packaged version.)
+
+To run wmlparser2, type the following into the terminal of your choice:
+
+  data/tools/wesnoth/wmlparser2.py -a pathToDataFolder -i data/_main.cfg -w pathToWesnothApplicationExecutable -j > everything.js
+
+Keep in mind, the Wesnoth executable is the actual executable file. For example, for Mac OS X, this is inside "Contents/Resources/MacOS".
+  
+Place this file at the same level as the bestiary directory. Make sure it is called "everything.js".
+
+4. Run "scripts/splitter.php". You can do this one of two ways: run it locally (safer) or run it on the server (less safe). Either way, you'll need write access to the data folder. When done, make sure to remove write access to the data folder.
