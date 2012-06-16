@@ -1,0 +1,12 @@
+body { font-family: palatino; padding: 8px; margin: 0px; }
+
+h3 { border-bottom: 1px solid #333; margin-bottom: 0.25em;}  
+
+table * { padding: 0px; margin: 0px; }
+table * p {  font-size: small }
+table { margin-bottom: 1em; text-transform: capitalize; }
+
+th { text-align: left; width: 150px;}
+
+#resistances td { text-align: right }
+#terrainadjustments * td, .defense, .movement { text-align: center; }
