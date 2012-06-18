@@ -99,3 +99,6 @@ a:active {
   color: #333;
 }
 
+#portrait {
+  float: right;
+}
