@@ -14,16 +14,22 @@ Visit the Wesnoth forums, at:
 http://forums.wesnoth.org/viewtopic.php?f=6&t=29138
 
 ## Changelog
+Version 2 Build 2
+17 June 2012
+* Added attack and resistance icons.
+* Added support for attacks.
+* Added better CSS so things look nice.
+* Added a textured background.
+* Removed .htaccess file.
+
 Version 2 Build 1
 16 June 2012
 * Renamed the project to Wesnoth Bestiary.
 * Completely re-designed Bestiary from the ground up.
 * Features will be added back in slowly, so as to get things right. Many things have changed; there are new APIs and more features enabled for popular browsers. I plan on leveraging this.
 
-Version Build 1
+Version 1 Build 1
 17 April 2011
-
-WHAT'S NEW?
 * First entire upload of the project.
 * Rebuilt Bestiary versus Wesnoth r49262.
 * Made changes to table formatting to prepare for table sorting.

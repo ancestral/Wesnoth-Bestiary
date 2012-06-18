@@ -8,25 +8,21 @@
     <script type="text/javascript" src="scripts/jquery.min.js"></script>
     <script type="text/javascript" src="scripts/layout.js"></script>  </head>
   <body onhashchange="load()">
-  <div id="container">
-  	<div id="header">
-  	</div>
-  	<nav>
-  	  <a href="#default" class="selected">Default</a>
-  		<a href="#multiplayer">Multiplayer</a>
-      <a href="#era">Era</a>
-  		<a href="#campaign">Campaign</a>
-  	</nav>
-
-    <div id="content">
-      <?php echo $content; ?>
+    <div id="container">
+    	<header>
+      	<nav>
+      	  <a href="" class="selected">Default</a>
+      		<a href="">Multiplayer</a>
+          <a href="">Era</a>
+      		<a href="">Campaign</a>
+      	</nav>
+      </header>
+      <div id="content">
+        <?php echo $content; ?>
+      </div>
+      <footer>
+        <?php echo $footer; ?> © 2012
+      </footer>
     </div>
-
-    <div id="footer">
-      <?php echo $footer; ?>
-    </div>
-  </div>
-  <div id="sidebar">
-  </div>
   </body>
 </html>
