@@ -14,13 +14,12 @@ Visit the Wesnoth forums, at:
 http://forums.wesnoth.org/viewtopic.php?f=6&t=29138
 
 ## Changelog
-Version 2 Build 2a
+Version 2 Build 2b
 17 June 2012
 * Added attack and resistance icons.
 * Added support for attacks.
 * Added better CSS so things look nice.
 * Added a textured background.
-* Re-introduced .htaccess file.
 
 Version 2 Build 1
 16 June 2012

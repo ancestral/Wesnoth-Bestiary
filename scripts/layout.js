@@ -54,9 +54,9 @@ function load() {
 	for (var i in unitData.attack) {
 	  $('#attacks tbody').append("<tr><th><td>");
 		if (unitData.attack[i].icon) {
-		  $('#attacks tbody tr:last-child th').css('background', 'transparent url(../' + dataDirectory + 'core/images/' + unitData.attack[i].icon + ') left top no-repeat');
+		  $('#attacks tbody tr:last-child th').css('background', 'transparent url(' + dataDirectory + 'core/images/' + unitData.attack[i].icon + ') left top no-repeat');
 		} else {
-		  $('#attacks tbody tr:last-child th').css('background', 'transparent url(../' + dataDirectory + 'core/images/' + unitData.attack[i].name + ') left top no-repeat');
+		  $('#attacks tbody tr:last-child th').css('background', 'transparent url(' + dataDirectory + 'core/images/' + unitData.attack[i].name + ') left top no-repeat');
 		}
 		$('#attacks tbody tr:last-child th').html(unitData.attack[i].name + '<p>' + unitData.attack[i].range);
 		$('#attacks tbody tr:last-child td').html(unitData.attack[i].damage + '&nbsp;–&nbsp;' + unitData.attack[i].number + '<p>' + unitData.attack[i].type);
@@ -64,12 +64,12 @@ function load() {
 
 	var resistances = ["blade", "pierce", "impact", "fire", "cold", "arcane"];
 
-	$('#blade th').css('background', 'transparent url(../' + dataDirectory + 'core/images/attacks/sword-human.png) left top no-repeat');
-	$('#pierce th').css('background', 'transparent url(../' + dataDirectory + 'core/images/attacks/spear.png) left top no-repeat');
-	$('#impact th').css('background', 'transparent url(../' + dataDirectory + 'core/images/attacks/club.png) left top no-repeat');
-	$('#fire th').css('background', 'transparent url(../' + dataDirectory + 'core/images/attacks/fireball.png) left top no-repeat');
-	$('#cold th').css('background', 'transparent url(../' + dataDirectory + 'core/images/attacks/iceball.png) left top no-repeat');
-	$('#arcane th').css('background', 'transparent url(../' + dataDirectory + 'core/images/attacks/faerie-fire.png) left top no-repeat');
+	$('#blade th').css('background', 'transparent url(' + dataDirectory + 'core/images/attacks/sword-human.png) left top no-repeat');
+	$('#pierce th').css('background', 'transparent url(' + dataDirectory + 'core/images/attacks/spear.png) left top no-repeat');
+	$('#impact th').css('background', 'transparent url(' + dataDirectory + 'core/images/attacks/club.png) left top no-repeat');
+	$('#fire th').css('background', 'transparent url(' + dataDirectory + 'core/images/attacks/fireball.png) left top no-repeat');
+	$('#cold th').css('background', 'transparent url(' + dataDirectory + 'core/images/attacks/iceball.png) left top no-repeat');
+	$('#arcane th').css('background', 'transparent url(' + dataDirectory + 'core/images/attacks/faerie-fire.png) left top no-repeat');
 
 	for (var i in resistances) {
 	  $('#'+resistances[i]+' td').html(100 - (resistanceData.resistance[0][resistances[i]]).replace(/-/,"−") + "%");

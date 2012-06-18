@@ -63,16 +63,14 @@ th, td, p {
   font-size: 18px;
 }
 
-nav {
+nav, footer {
   background-color: #a98;
   float: left;
   width: 100%;
+  color: #fed;
 }
 
-footer {
-  background-color: #a98;
-  width: 100%;
-  color: #fed;
+footer span {
   padding: 0px 16px;
 }
 
