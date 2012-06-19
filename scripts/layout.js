@@ -54,9 +54,9 @@ function load() {
 	for (var i in unitData.attack) {
 	  $('#attacks tbody').append("<tr><th><td>");
 		if (unitData.attack[i].icon) {
-		  $('#attacks tbody tr:last-child th').css('background', 'transparent url(' + dataDirectory + 'core/images/' + unitData.attack[i].icon + 'png) left top no-repeat');
+		  $('#attacks tbody tr:last-child th').css('background', 'transparent url(' + dataDirectory + 'core/images/' + unitData.attack[i].icon + ') left top no-repeat');
 		} else {
-		  $('#attacks tbody tr:last-child th').css('background', 'transparent url(' + dataDirectory + 'core/images/' + unitData.attack[i].name + 'png) left top no-repeat');
+		  $('#attacks tbody tr:last-child th').css('background', 'transparent url(' + dataDirectory + 'core/images/' + unitData.attack[i].name + ') left top no-repeat');
 		}
 		$('#attacks tbody tr:last-child th').html(unitData.attack[i].name + '<p>' + unitData.attack[i].range);
 		$('#attacks tbody tr:last-child td').html(unitData.attack[i].damage + '&nbsp;–&nbsp;' + unitData.attack[i].number + '<p>' + unitData.attack[i].type);
