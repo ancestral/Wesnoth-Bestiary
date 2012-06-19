@@ -95,13 +95,13 @@ function load() {
 	  }
     if (unitData.defense != null) {
   	  if (unitData.defense[0][defenses[i]] != null) {
-        $('#'+defenses[i]+' td').html(100 - (unitData.defense[0][defenses[i]]).replace(/-/,"−") + "%");
+        $('#'+defenses[i]+' td+td').html(100 - (unitData.defense[0][defenses[i]]).replace(/-/,"−") + "%");
       }
     }
     
     if (unitData.movement_costs != null) {
   	  if (unitData.movement_costs[0][defenses[i]] != null) {
-        $('#'+defenses[i]+' td+td').html(unitData.movement_costs[0][defenses[i]]);
+        $('#'+defenses[i]+' td').html(unitData.movement_costs[0][defenses[i]]);
       }
     }
   }
