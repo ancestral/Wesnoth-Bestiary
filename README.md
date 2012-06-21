@@ -16,9 +16,9 @@ http://forums.wesnoth.org/viewtopic.php?f=6&t=29138
 ## Changelog
 Version 2 Build 3
 20 June 2012
-* Added support for portraits
-* Added logic to resize and hide portraits
-* Disabled links at top for now
+* Added support for portraits.
+* Added logic to resize and hide portraits.
+* Disabled links in nav for now.
 
 Version 2 Build 2b
 17 June 2012

@@ -54,10 +54,11 @@ function load() {
 	if (typeof unitData.portrait !== 'undefined') {
 	  var img = new Image();
     img.onload = function() {
-     if ($('#file').height() < this.height) {
-       $('#file').height(this.height);
-     }
-     $('#portrait').attr('src', this.src);
+      var that = this;
+      if ($('#file').height() < that.height) {
+        $('#file').height(that.height);
+      }
+      $('#portrait').attr('src', that.src);
     }
     
     img.src = (dataDirectory + 'core/images/' + unitData.portrait[1].image);
