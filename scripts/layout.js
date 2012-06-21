@@ -1,4 +1,4 @@
-var unitFile = "";
+var unitFile = '';
 var unitMap = [];
 var movementTypeMap = [];
 var unitData = {};
@@ -9,10 +9,10 @@ $(document).ready(function() {
 
 function load() {
   var get = window.location.hash.substring(1, window.location.hash.length);
-  get = get.replace(/%20/g," ");
-  get = get.replace(/\s+/g,"_");
-  window.location.hash = "#" + get.toLowerCase();
-  var unitFile = "data/units/" + get.toLowerCase() + ".js";
+  get = get.replace(/%20/g,' ');
+  get = get.replace(/\s+/g,'_');
+  window.location.hash = '#' + get.toLowerCase();
+  var unitFile = 'data/units/' + get.toLowerCase() + '.js';
 
 	$.ajax ({
 	  url: unitFile,
@@ -23,7 +23,7 @@ function load() {
 	  }
 	});
 	
-  var resistanceFile = "data/movetypes/" + unitData.movement_type + ".js";
+  var resistanceFile = 'data/movetypes/' + unitData.movement_type + '.js';
   
 	$.ajax ({
 	  url: resistanceFile,
@@ -35,9 +35,9 @@ function load() {
 	});
   	
 	var d = unitData.description;
-	d = d.replace(/\n\n/g,"<br /><br />");
-	d = d.replace(/>([^:<]+):/,"><em>$1:</em>");
-  d = d.replace(/SPECIAL_NOTE\^/,"");
+	d = d.replace(/\n\n/g,'<br /><br />');
+	d = d.replace(/>([^:<]+):/,'><em>$1:</em>');
+  d = d.replace(/SPECIAL_NOTE\^/,'');
 
 	$('#title').html(unitData.id);
 	$('#description').html(d);
@@ -48,11 +48,29 @@ function load() {
 	$('#hitpoints td').html(unitData.hitpoints);
 	$('#movement td').html(unitData.movement);
 	$('#experience td').html(unitData.experience);
-			
-	$('#attacks tbody').html("");
+
+  $('#file').css('height', 'auto');
+		
+	if (typeof unitData.portrait !== 'undefined') {
+	  var img = new Image();
+    img.onload = function() {
+     if ($('#file').height() < this.height) {
+       $('#file').height(this.height);
+     }
+     $('#portrait').attr('src', this.src);
+    }
+    
+    img.src = (dataDirectory + 'core/images/' + unitData.portrait[1].image);
+
+            
+		$('#portrait').show();
+  } else {
+    $('#portrait').hide();
+  }	
+	$('#attacks tbody').html('');
 
 	for (var i in unitData.attack) {
-	  $('#attacks tbody').append("<tr><th><td>");
+	  $('#attacks tbody').append('<tr><th><td>');
 		if (unitData.attack[i].icon) {
 		  $('#attacks tbody tr:last-child th').css('background', 'transparent url(' + dataDirectory + 'core/images/' + unitData.attack[i].icon + ') left top no-repeat');
 		} else {
@@ -62,7 +80,7 @@ function load() {
 		$('#attacks tbody tr:last-child td').html(unitData.attack[i].damage + '&nbsp;–&nbsp;' + unitData.attack[i].number + '<p>' + unitData.attack[i].type);
 	}
 
-	var resistances = ["blade", "pierce", "impact", "fire", "cold", "arcane"];
+	var resistances = ['blade', 'pierce', 'impact', 'fire', 'cold', 'arcane'];
 
 	$('#blade th').css('background', 'transparent url(' + dataDirectory + 'core/images/attacks/sword-human.png) left top no-repeat');
 	$('#pierce th').css('background', 'transparent url(' + dataDirectory + 'core/images/attacks/spear.png) left top no-repeat');
@@ -72,30 +90,30 @@ function load() {
 	$('#arcane th').css('background', 'transparent url(' + dataDirectory + 'core/images/attacks/faerie-fire.png) left top no-repeat');
 
 	for (var i in resistances) {
-	  $('#'+resistances[i]+' td').html(100 - (resistanceData.resistance[0][resistances[i]]).replace(/-/,"−") + "%");
+	  $('#'+resistances[i]+' td').html(100 - (resistanceData.resistance[0][resistances[i]]).replace(/-/,'−') + '%');
 	  if (unitData.resistance != null) {
 	    if (unitData.resistance[0][resistances[i]] != null) {
-		    $('#'+resistances[i]+' td').html(100 - (unitData.resistance[0][resistances[i]]).replace(/-/,"−") + "%"); 	
+		    $('#'+resistances[i]+' td').html(100 - (unitData.resistance[0][resistances[i]]).replace(/-/,'−') + '%'); 	
 		  }
 		}
   }
 
-	var defenses = ["castle", "cave", "reef", "deep_water", "flat", "forest", "frozen", "hills", "impassable", "mountains", "fungus", "sand", "shallow_water", "swamp_water", "unwalkable", "village"];		
+	var defenses = ['castle', 'cave', 'reef', 'deep_water', 'flat', 'forest', 'frozen', 'hills', 'impassable', 'mountains', 'fungus', 'sand', 'shallow_water', 'swamp_water', 'unwalkable', 'village'];		
 
 	for (var i in defenses) {
 	  if (resistanceData.defense != null) {
 	    if (resistanceData.defense[0][defenses[i]]) {
-    	  $('#'+defenses[i]+' td').html(100 - (resistanceData.defense[0][defenses[i]]).replace(/-/,"−") + "%");
+    	  $('#'+defenses[i]+' td').html(100 - (resistanceData.defense[0][defenses[i]]).replace(/-/,'−') + '%');
     	  $('#'+defenses[i]+' td+td').html(resistanceData.movement_costs[0][defenses[i]]);
       }
       else {
-        $('#'+defenses[i]+' td').html("—&nbsp;&nbsp;");
-    	  $('#'+defenses[i]+' td+td').html("–");
+        $('#'+defenses[i]+' td').html('—&nbsp;&nbsp;');
+    	  $('#'+defenses[i]+' td+td').html('–');
   	  }
 	  }
     if (unitData.defense != null) {
   	  if (unitData.defense[0][defenses[i]] != null) {
-        $('#'+defenses[i]+' td+td').html(100 - (unitData.defense[0][defenses[i]]).replace(/-/,"−") + "%");
+        $('#'+defenses[i]+' td+td').html(100 - (unitData.defense[0][defenses[i]]).replace(/-/,'−') + '%');
       }
     }
     

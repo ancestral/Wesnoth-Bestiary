@@ -4,7 +4,9 @@ body {
   margin: 0px;
   color: #333;
   background-image: url(../images/darkstone.jpg);
-  line-height: 1.3; }
+  line-height: 1.3;
+  text-rendering: optimizeLegibility;
+}
 
 h3 {
   border-bottom: 2px solid #333;
@@ -43,6 +45,10 @@ h2 {
   
   margin-bottom: 0px;
   font-weight: bold;
+}
+
+#portrait {
+  margin-left: 16px;
 }
 
 #attacks tbody tr td {
@@ -96,7 +102,6 @@ a:active {
 
 .selected {
   background-color: #cba;
-  color: #333;
 }
 
 #portrait {
