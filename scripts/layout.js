@@ -49,9 +49,10 @@ function load() {
 	$('#movement td').html(unitData.movement);
 	$('#experience td').html(unitData.experience);
 
-  $('#file').css('height', 'auto');
+  //$('#file').css('height', 'auto');
 		
 	if (typeof unitData.portrait !== 'undefined') {
+	  /*
 	  var img = new Image();
     img.onload = function() {
       var that = this;
@@ -62,7 +63,8 @@ function load() {
     }
     
     img.src = (dataDirectory + 'core/images/' + unitData.portrait[1].image);
-
+    */
+    $('#portrait').attr('src', (dataDirectory + 'core/images/' + unitData.portrait[1].image));
             
 		$('#portrait').show();
   } else {

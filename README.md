@@ -14,10 +14,10 @@ Visit the Wesnoth forums, at:
 http://forums.wesnoth.org/viewtopic.php?f=6&t=29138
 
 ## Changelog
-Version 2 Build 3
+Version 2 Build 3a
 20 June 2012
 * Added support for portraits.
-* Added logic to resize and hide portraits.
+* Removed logic for resizing. It’s all fluid, so things should just work.
 * Disabled links in nav for now.
 
 Version 2 Build 2b
