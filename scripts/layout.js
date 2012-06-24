@@ -5,6 +5,10 @@ var unitData = {};
 
 $(document).ready(function() {
   load();
+  
+  $('.next').live('click', function() {
+    window.location.hash = '#' + $(this).html();
+  });
 });
 
 function load() {
@@ -40,7 +44,7 @@ function load() {
   d = d.replace(/SPECIAL_NOTE\^/,'');
 
 	$('#title').html(unitData.id);
-	$('#description').html(d);
+	$('#description + p').html(d);
 	$('#race td').html(unitData.race);
 	$('#alignment td').html(unitData.alignment);
 	$('#level td').html(unitData.level);
@@ -48,29 +52,25 @@ function load() {
 	$('#hitpoints td').html(unitData.hitpoints);
 	$('#movement td').html(unitData.movement);
 	$('#experience td').html(unitData.experience);
-
-  //$('#file').css('height', 'auto');
 		
 	if (typeof unitData.portrait !== 'undefined') {
-	  /*
-	  var img = new Image();
-    img.onload = function() {
-      var that = this;
-      if ($('#file').height() < that.height) {
-        $('#file').height(that.height);
-      }
-      $('#portrait').attr('src', that.src);
-    }
-    
-    img.src = (dataDirectory + 'core/images/' + unitData.portrait[1].image);
-    */
     $('#portrait').attr('src', (dataDirectory + 'core/images/' + unitData.portrait[1].image));
-            
 		$('#portrait').show();
   } else {
     $('#portrait').hide();
   }	
 	$('#attacks tbody').html('');
+	$('#advancement tbody').html('<tr><td id="current">');
+
+	$('#current').html(unitData.name);
+
+  if (unitData.advances_to !== 'null')
+	for (var i in unitData.advances_to.split(',')) {
+	  that = unitData.advances_to.split(',')[i];
+    $('#advancement tbody tr').append('<td class="next">' + that + '</td>');
+	}
+	$('#current').css('background', '#ffc url(' + dataDirectory + 'core/images/' + unitData.image + ') top center no-repeat');
+	$('.next').css('background', 'transparent url(' + dataDirectory + 'core/images/units/unknown-unit.png) top center no-repeat');
 
 	for (var i in unitData.attack) {
 	  $('#attacks tbody').append('<tr><th><td>');
@@ -106,23 +106,23 @@ function load() {
 	for (var i in defenses) {
 	  if (resistanceData.defense != null) {
 	    if (resistanceData.defense[0][defenses[i]]) {
-    	  $('#'+defenses[i]+' td').html(100 - (resistanceData.defense[0][defenses[i]]).replace(/-/,'−') + '%');
-    	  $('#'+defenses[i]+' td+td').html(resistanceData.movement_costs[0][defenses[i]]);
+    	  $('#'+defenses[i]+' td:nth-child(2)').html(100 - (resistanceData.defense[0][defenses[i]]).replace(/-/,'−') + '%');
+    	  $('#'+defenses[i]+' td:nth-child(3)').html(resistanceData.movement_costs[0][defenses[i]]);
       }
       else {
-        $('#'+defenses[i]+' td').html('—&nbsp;&nbsp;');
-    	  $('#'+defenses[i]+' td+td').html('–');
+        $('#'+defenses[i]+' td:nth-child(2)').html('—&nbsp;');
+    	  $('#'+defenses[i]+' td:nth-child(3)').html('–');
   	  }
 	  }
     if (unitData.defense != null) {
   	  if (unitData.defense[0][defenses[i]] != null) {
-        $('#'+defenses[i]+' td+td').html(100 - (unitData.defense[0][defenses[i]]).replace(/-/,'−') + '%');
+        $('#'+defenses[i]+' td:nth-child(2)').html(100 - (unitData.defense[0][defenses[i]]).replace(/-/,'−') + '%');
       }
     }
     
     if (unitData.movement_costs != null) {
   	  if (unitData.movement_costs[0][defenses[i]] != null) {
-        $('#'+defenses[i]+' td').html(unitData.movement_costs[0][defenses[i]]);
+        $('#'+defenses[i]+' td:nth-child(3)').html(unitData.movement_costs[0][defenses[i]]);
       }
     }
   }

@@ -10,7 +10,7 @@ body {
 
 h3 {
   border-bottom: 2px solid #333;
-  margin-bottom: 0.25em;
+  margin-bottom: 8px;
   margin-top: 0px;
   font-size: 24px;
 }  
@@ -27,39 +27,41 @@ th { text-align: left; width: 150px;}
 #container {
   margin: 24px;
   border: 1px solid #333;
+  width: 896px;  
 }
 
 #content {
   padding: 16px;
-  background-image: url(../images/paper.png);
-}
-
-#title {
-  margin: 0px;
-  padding: 0px;
+  background-image: url(../images/paper.jpg);
+  display: inline-block;
 }
 
 h2 {
   color: rgba(0,0,0,0.4);
   font-size: 60px;
   text-shadow: 0px 0px 6px #fed, 0px 0px #000;
-  
-  margin-bottom: 0px;
+  border-bottom: 2px solid #333;
   font-weight: bold;
+  margin: 0px;
+  margin-bottom: 8px;
+  padding: 0px;
 }
 
 #portrait {
-  margin-left: 16px;
   margin-bottom: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
 
 #attacks tbody tr td {
   font-size: 36px;
+  padding-bottom: 12px;
 }
 
 #attacks tbody tr th, #resistances tbody tr th {
   height: 60px;
-  padding-left: 68px;
+  padding-left: 76px;
 }
 
 #resistances tbody tr td {
@@ -94,7 +96,7 @@ a:link, a:visited {
 }
 
 a:hover {
-  background-image: url(../images/paper.png);
+  background-image: url(../images/paper.jpg);
   color: #333;
 }
 
@@ -106,10 +108,30 @@ a:active {
   background-color: #cba;
 }
 
-#portrait {
-  float: right;
+#right {
+  float: left;
+  width: 500px;
 }
 
-#stats {
-  clear: right;
+#left {
+  float: left;
+  width: 348px;
+  margin-right: 16px;
+}
+
+#advancement tbody tr td {
+  width: 116px;
+  text-align: center;
+  padding-top: 96px;
+  //font-size: 18px;
+  border-radius: 16px;
+  margin-right: 36px;
+}
+
+#current {
+  font-weight: bold;
+}
+
+#description {
+  clear: left;
 }

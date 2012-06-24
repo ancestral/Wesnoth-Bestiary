@@ -18,10 +18,21 @@
       	</nav>
       </header>
       <div id="content">
-        <?php echo $content; ?>
+        <h2 id="title"></h2>
+        <div id="left">
+          <?php echo $statistics; ?>
+          <?php echo $attacks; ?>
+          <?php echo $resistances; ?>
+          <?php echo $terrain; ?>
+        </div>
+        <div id="right">
+          <img id="portrait" />
+          <?php echo $advancement; ?>
+          <?php echo $description; ?>
+        </div>
       </div>
       <footer>
-        <span><?php echo $footer; ?></span>
+        <!-- span><?php echo $footer; ?></span -->
       </footer>
     </div>
   </body>

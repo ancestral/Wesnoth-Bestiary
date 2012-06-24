@@ -14,6 +14,13 @@ Visit the Wesnoth forums, at:
 http://forums.wesnoth.org/viewtopic.php?f=6&t=29138
 
 ## Changelog
+Version 2 Build 4
+24 June 2012
+* Reworked layout. Stats are placed prominently earlier in the page now. Left and right divs (may be changed to sections later) are now fixed width.
+* Added preliminary support for advancement. Clicking on an advanced unit will load that unit’s page.
+* Fixed bug with defense exceptions showing under movement.
+* Removed footer.
+
 Version 2 Build 3a
 20 June 2012
 * Added support for portraits.
