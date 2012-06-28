@@ -14,6 +14,10 @@ Visit the Wesnoth forums, at:
 http://forums.wesnoth.org/viewtopic.php?f=6&t=29138
 
 ## Changelog
+Version 2 Build 5
+* Re-organized the template.
+* Using icon as portrait where there is none.
+
 Version 2 Build 4
 24 June 2012
 * Reworked layout. Stats are placed prominently earlier in the page now. Left and right divs (may be changed to sections later) are now fixed width.

@@ -37,7 +37,9 @@ function load() {
 	    resistanceData = data;
 	  }
 	});
-  	
+  
+  $('#portrait').hide();
+  
 	var d = unitData.description;
 	d = d.replace(/\n\n/g,'<br /><br />');
 	d = d.replace(/>([^:<]+):/,'><em>$1:</em>');
@@ -57,7 +59,9 @@ function load() {
     $('#portrait').attr('src', (dataDirectory + 'core/images/' + unitData.portrait[1].image));
 		$('#portrait').show();
   } else {
-    $('#portrait').hide();
+    $('#portrait').attr('src', (dataDirectory + 'core/images/' + unitData.image));
+    $('#portrait').attr('height', '400px');
+    $('#portrait').show();
   }	
 	$('#attacks tbody').html('');
 	$('#advancement tbody').html('<tr><td id="current">');
@@ -69,7 +73,7 @@ function load() {
 	  that = unitData.advances_to.split(',')[i];
     $('#advancement tbody tr').append('<td class="next">' + that + '</td>');
 	}
-	$('#current').css('background', '#ffc url(' + dataDirectory + 'core/images/' + unitData.image + ') top center no-repeat');
+	$('#current').css('background', '#ffd url(' + dataDirectory + 'core/images/' + unitData.image + ') top center no-repeat');
 	$('.next').css('background', 'transparent url(' + dataDirectory + 'core/images/units/unknown-unit.png) top center no-repeat');
 
 	for (var i in unitData.attack) {

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html><head><title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../list.css">
+    <link rel="shortcut icon" href="images/wesnoth-icon.png">
+    <script type="text/javascript" src="scripts/jquery.min.js"></script><style type="text/css"></style>
+    <script type="text/javascript" src="scripts/layout.js"></script>
+    <style>
+      li {
+        list-style-type: none;
+        display: block;
+      }
+      
+      #title {
+        color: rgba(0,0,0,0.4);
+        font-size: 60px;
+        text-shadow: 0px 0px 6px #fed, 0px 0px #000;
+        border-bottom: 2px solid #333;
+        font-weight: bold;
+        margin: 0px;
+        margin-bottom: 8px;
+        padding: 0px;
+      }
+      
+      .h3 {
+        border-bottom: 2px solid #333;
+        margin-bottom: 8px;
+        margin-top: 0px;
+        font-size: 24px;
+      }
+      
+      .key {
+        font-weight: bold;
+      }
+      
+      #attacks tbody tr td {
+        font-size: 36px;
+        padding-bottom: 12px;
+      }
+
+      #attacks tbody tr th, #resistances tbody tr th {
+        height: 60px;
+        padding-left: 76px;
+      }
+
+      #resistances tbody tr td {
+        font-size: 24px;
+        width: 72px;
+      }
+
+      #nav, #footer {
+        background-color: #a98;
+        float: left;
+        width: 100%;
+        color: #fed;
+      }
+
+      #nav li {
+        float: left;
+        padding: 4px 16px;
+      }
+
+      .selected {
+        background-color: #cba;
+      }
+
+      #nav li:hover {
+        background-image: url(images/paper.jpg);
+        color: #333;
+      }
+
+      #advancement tbody tr td {
+        width: 116px;
+        text-align: center;
+        padding-top: 96px;
+        //font-size: 18px;
+        border-radius: 16px;
+        margin-right: 36px;
+      }
+    </style>
+  </head>
+  <body onhashchange="load()">
+    <ul id="container">
+    	<ul id="nav">
+    	  <li class="selected">Default
+    		<li>Multiplayer
+        <li>Era
+    		<li>Campaign
+    	</ul>
+      <ul id="content">
+        <li id="title">Sergeant</li>
+        <ul id="left">
+          <ul class="key">
+            <li>Race
+            <li>Alignment
+          </ul>
+          <ul class="key">
+            <li id="race"></li>
+            <li id="alignment"></li>
+          </ul>
+          <ul class="key">
+            <li>Level
+            <li>Cost
+            <li>Hitpoints
+            <li>Movement
+            <li>Experience
+          </ul>
+          <ul>
+            <li id="level">
+            <li id="cost">
+            <li id="hitpoints">
+            <li id="movement">
+            <li id="experience">
+          </ul>
+          <ul id="attacks" class="key">
+            <li>Attacks
+          </ul>
+          <ul id="resistances">
+            <li>Resistances
+            <ul class="key">
+              <li>Blade
+              <li>Pierce
+              <li>Impact
+              <li>Fire
+              <li>Cold
+              <li>Arcane
+            </ul>
+            <ul>
+              <li id="blade">
+              <li id="pierce">
+              <li id="impact">
+              <li id="fire">
+              <li id="cold">
+              <li id="arcane">
+            </ul>
+          </ul>
+          <ul id="terrainadjustments">
+            <li>Terrain Adjustments
+            <ul class="terrain">
+              <li>Castle</li>
+              <li>Cave</li>
+              <li>Coastal Reef</li>
+              <li>Deep Water</li>
+              <li>Flat</li>
+              <li>Forest</li>
+              <li>Frozen</li>
+              <li>Hills</li>
+              <li>Impassable</li>
+              <li>Mountains</li>
+              <li>Mushroom</li>
+              <li>Sand</li>
+              <li>Shallow Water</li>
+              <li>Swamp</li>
+              <li>Unwalkable</li>
+              <li>Village</li>
+            </ul>
+            <li>Defense
+            <ul id="defense">
+              <li class="castle">
+              <li class="cave">
+              <li class="reef">         
+              <li class="deep_water">   
+              <li class="flat">         
+              <li class="forest">       
+              <li class="frozen">       
+              <li class="hills">        
+              <li class="impassable">   
+              <li class="mountains">    
+              <li class="fungus">       
+              <li class="sand">         
+              <li class="shallow_water">
+              <li class="swamp_water">  
+              <li class="unwalkable">   
+              <li class="village">
+            </ul>
+            <li>Movement
+            <ul id="movement">
+              <li class="castle">
+              <li class="cave">
+              <li class="reef">         
+              <li class="deep_water">   
+              <li class="flat">         
+              <li class="forest">       
+              <li class="frozen">       
+              <li class="hills">        
+              <li class="impassable">   
+              <li class="mountains">    
+              <li class="fungus">       
+              <li class="sand">         
+              <li class="shallow_water">
+              <li class="swamp_water">  
+              <li class="unwalkable">   
+              <li class="village">
+            </ul>
+          </ul>
+        </ul>
+        <ul id="right">
+          <li id="portrait">
+          <ul id="description">
+            <li>
+          </ul>
+        </ul>
+      </ul>
+    </ul>
+    <script>
+      var dataDirectory = "..\/trunk\/data\/";
+    </script>
+  </body>
+</html>
