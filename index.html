@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Wesnoth Bestiary</title>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/default.css" />
+    <link rel="shortcut icon" href="images/wesnoth-icon.png" />
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/underscore.min.js"></script>
+    <script type="text/javascript" src="scripts/layout.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <nav>
+      	  <a class="selected">Default</a>
+          <a>Drakes</a>
+          <a>Knalgan Alliance</a>
+          <a>Loyalists</a>
+          <a>Northerners</a>
+          <a>Rebels</a>
+          <a>Undead</a>
+      		<!-- a>Multiplayer</a>
+          <a>Era</a>
+      		<a>Campaign</a -->
+      	</nav>
+      </header>
+      <div id="content">
+        <h1 id="title"></h1>
+        <div id="stats">
+          <table cellspacing="0" cellpadding="0"><colgroup><col class="key"><col class="value"><tbody>
+            <tr id="race"><th>Race<td>
+            <tr id="alignment"><th>Alignment<td>
+          </table>
+          <table cellspacing="0" cellpadding="0"><colgroup><col class="key"><col class="value"><tbody>
+            <tr id="level"><th>Level<td>
+            <tr id="cost"><th>Cost<td>
+            <tr id="hitpoints"><th>Hit Points<td>
+            <tr id="movement"><th>Movement<td>
+            <tr id="experience"><th>Experience<td>
+          </table>
+        
+          <h3>Attacks</h3>
+          <table id="attacks" cellspacing="0" cellpadding="0"><colgroup><col><col><tbody>
+            <tr><th><p><td><p>
+          </table>
+        </div>
+      
+        <div id="picture">
+          <img id="portrait" />
+        </div>
+      
+        <div id="advance">
+          <h3>Advancement</h3>
+          <table id="advancement" cellspacing="0" cellpadding="0"><colgroup><col><col><tbody>
+            <tr><td id="current">
+          </table>
+        </div>
+      
+        <div id="desc">
+          <h3 id="description">Description</h3>
+          <p></p>
+        </div>
+      
+        <div id="resist">
+          <h3>Resistances</h3>
+          <table id="resistances" cellspacing="0" cellpadding="0"><colgroup><col class="key"><col class="value"><tbody>
+            <tr id="blade"><th>Blade<td>
+            <tr id="pierce"><th>Pierce<td>
+            <tr id="impact"><th>Impact<td>
+            <tr id="fire"><th>Fire<td>
+            <tr id="cold"><th>Cold<td>
+            <tr id="arcane"><th>Arcane<td>
+          </table>
+        </div>
+      
+        <div id="terra">
+          <h3>Terrain Adjustments</h3>
+          <table id="terrainadjustments" cellspacing="0" cellpadding="0"><colgroup><col class="terrain"><col class="defense"><col class="movement">
+            <thead>
+            <th class="terrain"><th class="defense">Defense<th class="movement">Movement
+            <tbody id="adjustments">
+          </table>
+        </div>
+      </div>
+      <footer>
+    
+      </footer>
+    </div>
+  </body>
+</html>

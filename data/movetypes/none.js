@@ -1,1 +1,0 @@
-{"movement_costs":[[]],"defense":[[]],"resistance":[[]],"name":"none","flies":"false"}

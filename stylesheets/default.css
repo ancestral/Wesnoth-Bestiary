@@ -1,5 +1,5 @@
 body { 
-  font-family: "Palatino", "Palatino Linotype", "URW Palladio L", "Zapf Calligraphic 801", "TeX Gyre Pagella", "Book Antiqua", serif;
+  font-family: 'Palatino', 'Palatino Linotype', 'URW Palladio L', 'Zapf Calligraphic 801', 'TeX Gyre Pagella', 'Book Antiqua', serif;
   padding: 0px;
   margin: 0px;
   color: #333;
@@ -32,11 +32,11 @@ th { text-align: left; width: 150px;}
 
 #content {
   padding: 16px;
-  background-image: url(../images/paper.jpg);
+  background-image: url('../images/paper.jpg');
   display: inline-block;
 }
 
-h2 {
+h1 {
   color: rgba(0,0,0,0.4);
   font-size: 60px;
   text-shadow: 0px 0px 6px #fed, 0px 0px #000;
@@ -51,7 +51,7 @@ h2 {
   margin-bottom: 16px;
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
 }
 
 #attacks tbody tr td {
@@ -108,22 +108,28 @@ a:active {
   background-color: #cba;
 }
 
-#right {
+#stats {
+  width: 348px;
+  margin-right: 16px;
   float: left;
+}
+
+#picture, #desc, #terra {
+  float: right;
   width: 500px;
 }
 
-#left {
-  float: left;
+#advance, #resist {
   width: 348px;
   margin-right: 16px;
+  float: left;
+  clear: both;
 }
 
 #advancement tbody tr td {
   width: 116px;
   text-align: center;
   padding-top: 96px;
-  //font-size: 18px;
   border-radius: 16px;
   margin-right: 36px;
 }
@@ -134,4 +140,8 @@ a:active {
 
 #description {
   clear: left;
+}
+
+th.terrain, th.defense, th.movement {
+  cursor: pointer;
 }
