@@ -1,5 +1,9 @@
 RewriteEngine On
 
+RewriteRule ^(.*?)\s+(.*?)$ $1_$2 [N]
+RewriteRule ^(.*?)([_-]+){2,}(.*?)$ $1_$3 [N]
+RewriteRule ^[_]+(.*)$ $1
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 

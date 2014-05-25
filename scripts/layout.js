@@ -35,7 +35,7 @@ Bestiary.adjustments = {
 })(jQuery);
 
 $(window).load(function() {
-  var queryUnit = $.QueryString['unit'];
+  var queryUnit = $.QueryString['unit'].toLowerCase();
   Bestiary.state = { unit: queryUnit };
   history.pushState(Bestiary.state, queryUnit, queryUnit);
 });
