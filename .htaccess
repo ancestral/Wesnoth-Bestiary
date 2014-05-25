@@ -1,0 +1,8 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteBase /bestiary
+
+RewriteRule ^([^\/]+).*$ index.html?unit=$1 [L,NC,R]

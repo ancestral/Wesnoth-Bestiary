@@ -20,26 +20,42 @@ Bestiary.adjustments = {
  village: { name: 'Village', defense: 0, movement: 0 }
 };
 
-$(function() {
-  window.onhashchange = function() {
-    load();
-  };
-  
+(function($) {
+    $.QueryString = (function(a) {
+        if (a == "") return {};
+        var b = {};
+        for (var i = 0; i < a.length; ++i)
+        {
+            var p=a[i].split('=');
+            if (p.length != 2) continue;
+            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+        }
+        return b;
+    })(window.location.search.substr(1).split('&'))
+})(jQuery);
+
+$(window).load(function() {
+  var queryUnit = $.QueryString['unit'];
+  Bestiary.state = { unit: queryUnit };
+  history.pushState(Bestiary.state, queryUnit, queryUnit);
+});
+
+$(function() {  
   var get = '';
   var unitFile = '';
   var unitData = {};
   var resistanceData = {};
 
-  $('#terrain').mouseup(function() {
+  $('#terrain').click(function() {
     sortTable('name');
   });
   
-  $('#defense').mouseup(function() {
+  $('#defense').click(function() {
     sortTable('defense');
     alert('hi');
   });
   
-  $('#movement').mouseup(function() {
+  $('#movement').click(function() {
     sortTable('movement');
   });
 
