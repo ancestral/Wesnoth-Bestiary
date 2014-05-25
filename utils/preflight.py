@@ -6,27 +6,31 @@
 #
 # last updated 22 May 2014
 
-"""
-python
-import os, sys, json, subprocess, argparse
-subprocess.call(["/Users/martinproud/Documents/wesnoth/Bestiary/utils/preflight.py", "-i", "~/Desktop/out.json"])
+import errno, inspect, json, os, re, shutil, subprocess, sys
 
-"""
+# These two variables will change over time, and from system to system:
+WESNOTH_VERSION = '1.11'
+MAIN_DIR = '/Applications/Wesnoth.app/Contents/Resources/'
 
+# Other settings, for the most part automatically generated based on MAIN_DIR:
+CURRENT_DIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))) + '/'
+SYS_PLATFORM = sys.platform
+DATA_DIR = MAIN_DIR + 'data/'
+WESNOTH_EXE_PATH = MAIN_DIR + 'wesnoth.exe'
+CONFIG_DIR = ''
+INPUT = DATA_DIR + 'core/units.cfg'
+TMP_DIR = '/tmp/'
+BESTIARY_DATA_DIR = CURRENT_DIR + '../data/'
 
-import errno, json, os, re, sys
+if SYS_PLATFORM == 'darwin':
+    WESNOTH_EXE_PATH = os.path.abspath(os.path.join(MAIN_DIR, os.pardir)) + '/MacOS/Wesnoth'
+    CONFIG_DIR = '~/Library/Application\\ Support/Wesnoth_' + WESNOTH_VERSION + '/'
+elif SYS_PLATFORM == ('win32' or 'cygwin'):
+    CONFIG_DIR = '/Documents/My\\ Games/Wesnoth' + WESNOTH_VERSION + '/'
+    TMP_DIR = '%USERPROFILE%/AppData/Local/Temp/'
+else:
+    CONFIG_DIR = '~/.local/share/wesnoth/' + WESNOTH_VERSION + '/'    
 
-CURRENT_DIR = os.path.dirname(os.path.realpath(sys.argv[0])) + '/'
-
-if __name__ == "__main__":    
-    sys.stdout = __import__("codecs").getwriter('utf-8')(sys.stdout)
-    #parser = argparse.ArgumentParser(description='Splits output from wmlparser2.py into separate JSON files.')
-    #parser.add_argument("-i", "--input", help="JSON file to parse")
-    #args = parser.parse_args()
-    
-    if len(sys.argv) <= 1:
-        sys.stderr.write("No input given. Use -h for help.\n")
-        sys.exit(1)
 
 def parseJSON(jsonFile):
     with open(jsonFile) as json_file:
@@ -46,7 +50,6 @@ def splitFiles(kind, fileType, key):
 
 def mkdirs(paths):
     for path in paths:
-        print path
         try:
             os.makedirs(path)
         except OSError as e:
@@ -55,6 +58,36 @@ def mkdirs(paths):
             else:
                 raise
 
-mkdirs([CURRENT_DIR + '../data/races', CURRENT_DIR + '../data/movetypes', CURRENT_DIR + '../data/units'])
+class font:
+   PURPLE = '\033[95m'
+   CYAN = '\033[96m'
+   DARKCYAN = '\033[36m'
+   BLUE = '\033[94m'
+   GREEN = '\033[92m'
+   YELLOW = '\033[93m'
+   RED = '\033[91m'
+   BOLD = '\033[1m'
+   UNDERLINE = '\033[4m'
+   END = '\033[0m'
 
-parseJSON(sys.argv[1])
+
+if __name__ == "__main__":    
+    sys.stdout = __import__("codecs").getwriter('utf-8')(sys.stdout)
+    out = open(TMP_DIR + 'data.json', 'w')
+    
+    subprocess.call(['python', DATA_DIR + 'tools/wesnoth/wmlparser2.py', '-j', '-a', MAIN_DIR, '-c', CONFIG_DIR, '-i', INPUT, '-w', WESNOTH_EXE_PATH], stdout=out)
+    
+    mkdirs([ BESTIARY_DATA_DIR + 'races', BESTIARY_DATA_DIR + 'movetypes', BESTIARY_DATA_DIR + 'units' ])
+    
+    GPL_WARNING = ('\n' + ''.join('*' * 80) + '\n* ' + font.YELLOW + 'Note:' + font.END + ' Data from ' + font.BOLD + 'The Battle for Wesnoth' + font.END + ' is subject to the GPLv2. You may read *\n' + '* the license online at http://www.gnu.org/licenses/gpl-2.0.html.' + ''.join(' ' * 14) + '*\n' + ''.join('*' * 80) + '\n\n')
+    
+    if os.path.isfile(DATA_DIR + 'COPYING.txt'):
+        try:
+            shutil.copyfile(DATA_DIR + 'COPYING.txt', BESTIARY_DATA_DIR + 'COPYING.txt')
+        except:
+            sys.stderr.write(GPL_WARNING)
+    else:
+        sys.stderr.write(GPL_WARNING)
+    
+    parseJSON(TMP_DIR + 'data.json')
+

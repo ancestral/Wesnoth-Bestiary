@@ -63,6 +63,14 @@ $(function() {
 	  });
   }
   
+  function dropLast(path) {
+    last = path.lastIndexOf('/');
+    if (last !== -1) {
+      path = path.substr(0, last) + '/transparent' + path.substr(last)
+    }
+    return path
+  }
+  
   function sortTable(sortedBy) {
     var stats = [];
 
@@ -94,8 +102,8 @@ $(function() {
   	$('#movement td').html(unitData.movement);
   	$('#experience td').html(unitData.experience);
 		
-  	if (typeof unitData.portrait !== 'undefined') {
-      $('#portrait').attr('src', (Bestiary.dataDirectory + 'core/images/' + unitData.portrait[1].image));
+  	if (typeof unitData.profile !== 'undefined') {
+      $('#portrait').attr('src', (Bestiary.dataDirectory + 'core/images/' + dropLast(unitData.profile)));
   		$('#portrait').show();
     } else {
       $('#portrait').attr('src', (Bestiary.dataDirectory + 'core/images/' + unitData.image));
