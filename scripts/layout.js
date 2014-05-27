@@ -2,8 +2,13 @@ var Bestiary = {
   load: function() {
     Bestiary.unitFile = 'data/units/' + window.location.pathname.split('/')[2] + '.json';
     Bestiary.resistanceFile = '';
+    var coolpage1 = [ 'Ancient Lich', 'Mermaid Enchantress', 'Mudcrawler', 'Orcish Sovereign', 'Sea Serpent', 'Troll Shaman', 'Woodsman', 'Young Ogre' ];
     var faction = [ 'drakes', 'khalifate', 'knalgan_alliance', 'loyalists', 'northerners', 'rebels', 'undead' ];
-    Bestiary.faction = {}
+    Bestiary.faction = {
+      misc: {
+        recruit: coolpage1
+      }
+    }
   	$('#advancement').html('');
     var imgs = [];
     $.getJSON(Bestiary.unitFile).done(function(data) {
@@ -221,14 +226,15 @@ $(function() {
       var recruits = Bestiary.faction[that].recruit;
       $('#browserUnits').html('');
       for (var i in recruits) {
-        console.log(recruits[i]);
         $('#browserUnits').append('<li class="next">' + recruits[i] + '</li>');
       	$('.next').css('background', 'transparent url() top center no-repeat');
         $('.next').css('background', 'transparent url(' + Bestiary.dataDirectory + 'core/images/units/unknown-unit.png) top center no-repeat');
       }
     }
     if ($('#browser').is(':hidden')) {
-      $('#browser').slideDown();
+      if (!$(this).hasClass('selected')) {
+        $('#browser').slideDown();        
+      }
     }
   });
   

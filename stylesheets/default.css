@@ -109,18 +109,18 @@ footer span {
   padding: 0px 16px;
 }
 
-a {
+nav a {
   display: block;
   float: left;
   padding: 4px 16px;
 }
 
-a:link, a:visited {
+nav a:link, nav a:visited {
   text-decoration: none;
   color: #fed;
 }
 
-a:hover {
+nav a:hover {
   background-image: url('../images/paper.jpg');
   color: #333;
 }
@@ -184,4 +184,22 @@ th.terrain, th.defense, th.movement {
 
 .next {
   cursor: pointer; 
+}
+
+#left h3, #right h3 {
+  border: none;
+}
+
+#left {
+  position: absolute;
+  top: 96px;
+  left: 32px;
+  display: none;
+}
+
+#right {
+  position: absolute;
+  top: 96px;
+  left: 900px;
+  display: none;
 }
