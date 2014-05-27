@@ -6,14 +6,31 @@ Bestiary has been overhauled. Consider this Version 2.
 ## What is Wesnoth Bestiary?
 This is a web site for browsing unit information for a free strategy game called The Battle For Wesnoth. (Not familiar? Check it out at http://www.wesnoth.org) Part of it is an experiment and self-learning to the wonderful ways of JavaScript, jquery, and web design. As I continue to work on the project, it will eventually replace http://units.wesnoth.org.
 
-## Why here?
-Why not? I need a place that’s publicly accessible online so I can make edits from various different machines. I also want to make it relatively easy for people to download the files so they can test and debug it themselves. It is mirrored at http://mproud.com/wesnoth/bestiary for your convenience.
-
 ## Where can I learn more?
 Visit the Wesnoth forums, at:
 http://forums.wesnoth.org/viewtopic.php?f=6&t=29138
 
 ## Changelog
+Version 2 Beta 2
+* Updated licensing information. There is now a LICENSE.md file which
+contains information on all components.
+* No longer using underscore.
+* Incorporated awesome tablesorter build by mottie!
+* Fixed table sorting issues. Name headers now are a static ascending
+sort, the rest correctly sort when clicked, and terrain without numbers
+always show at the botom.
+* Edited preflight so that it automates more content, including
+factions.
+* Included a unit browser. It’s not complete yet, but it is fully
+functional.
+* Modified loading and url parsing behvior.
+* All sorts of other gooey, yummy bug fixes.
+
+Version 2 Beta 1
+* No PHP required. All dynamic loading is handled via JavaScript.
+* All data files are generated form a Python file, and have thus been
+removed.
+
 Version 2 Build 5
 * Re-organized the template.
 * Using icon as portrait where there is none.
