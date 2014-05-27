@@ -13,7 +13,7 @@ var Bestiary = {
   	    Bestiary.resistanceData = data;
 
         var jxhr = [];
-        var result = []
+        var result = [];
         
         for (var i in faction) {
           jxhr.push($.getJSON('data/factions/' + faction[i] + '.json').done(function(data) {
