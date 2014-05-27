@@ -37,7 +37,8 @@ def parseJSON(jsonFile):
         data = json.load(json_file)
         splitFiles('units', data['+units'][0]['unit_type'], 'id')
         splitFiles('movetypes', data['+units'][0]['movetype'], 'name')
-        splitFiles('races', data['+units'][0]['race'], 'id')    
+        splitFiles('races', data['+units'][0]['race'], 'id')
+        splitFiles('factions', data['multiplayer_side'], 'id')
 
 def friendlify(word):
     return re.sub(r' ','_', word).lower()
@@ -73,11 +74,22 @@ class font:
 
 if __name__ == "__main__":    
     sys.stdout = __import__("codecs").getwriter('utf-8')(sys.stdout)
+
+    with open(TMP_DIR + 'data.cfg', 'w') as out:
+        for faction in os.listdir(DATA_DIR + 'multiplayer/factions'):
+            if faction.endswith('default.cfg'):
+                with open(DATA_DIR + 'multiplayer/factions/' + faction, 'r') as infile:
+                    out.write(infile.read())
+        with open(INPUT, 'r') as infile:
+            out.write(infile.read())
+
     out = open(TMP_DIR + 'data.json', 'w')
     
-    subprocess.call(['python', DATA_DIR + 'tools/wesnoth/wmlparser2.py', '-j', '-a', MAIN_DIR, '-c', CONFIG_DIR, '-i', INPUT, '-w', WESNOTH_EXE_PATH], stdout=out)
+    subprocess.call(['python', DATA_DIR + 'tools/wesnoth/wmlparser2.py', '-j', '-a', MAIN_DIR, '-c', CONFIG_DIR, '-i', TMP_DIR + 'data.cfg', '-w', WESNOTH_EXE_PATH], stdout=out)
     
-    mkdirs([ BESTIARY_DATA_DIR + 'races', BESTIARY_DATA_DIR + 'movetypes', BESTIARY_DATA_DIR + 'units' ])
+    out.close()
+        
+    mkdirs([ BESTIARY_DATA_DIR + 'races', BESTIARY_DATA_DIR + 'movetypes', BESTIARY_DATA_DIR + 'units', BESTIARY_DATA_DIR + 'factions' ])
     
     GPL_WARNING = ('\n' + ''.join('*' * 80) + '\n* ' + font.YELLOW + 'Note:' + font.END + ' Data from ' + font.BOLD + 'The Battle for Wesnoth' + font.END + ' is subject to the GPLv2. You may read *\n' + '* the license online at http://www.gnu.org/licenses/gpl-2.0.html.' + ''.join(' ' * 14) + '*\n' + ''.join('*' * 80) + '\n\n')
     

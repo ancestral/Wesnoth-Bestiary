@@ -15,24 +15,48 @@ h3 {
   font-size: 24px;
 }  
 
-table * { padding: 0px; margin: 0px; }
-table * p {  font-size: 14px; }
-table { margin-bottom: 1em; text-transform: capitalize; }
+table * {
+  padding: 0px;
+  margin: 0px;
+  border-spacing: 0px;
+  border-collapse: separate;
+}
 
-th { text-align: left; width: 150px;}
+table * p {
+  font-size: 14px;
+}
 
+table {
+  margin-bottom: 1em;
+  text-transform: capitalize;
+}
+
+th {
+  text-align: left;
+  width: 150px;
+}
+
+#terrainadjustments {
+  line-height: 1.2;
+  width: 500px;
+}
 #resistances td { text-align: right }
-#terrainadjustments * td, .defense, .movement { text-align: center; }
+#terrainadjustments * td, .defense, .movement { text-align: center;   
+}
 
 #container {
   margin: 24px;
   border: 1px solid #333;
   width: 896px;  
+  background-image: url('../images/paper.jpg');
+}
+
+header {
+  display: block;
 }
 
 #content {
   padding: 16px;
-  background-image: url('../images/paper.jpg');
   display: inline-block;
 }
 
@@ -78,6 +102,7 @@ nav, footer {
   float: left;
   width: 100%;
   color: #fed;
+  display: inline;
 }
 
 footer span {
@@ -96,12 +121,8 @@ a:link, a:visited {
 }
 
 a:hover {
-  background-image: url(../images/paper.jpg);
+  background-image: url('../images/paper.jpg');
   color: #333;
-}
-
-a:active {
-  text-shadow: 0px 0px 2px #765;
 }
 
 .selected {
@@ -126,12 +147,13 @@ a:active {
   clear: both;
 }
 
-#advancement tbody tr td {
-  width: 116px;
+#advancement li, #browserUnits li {
+  width: 102px;
   text-align: center;
   padding-top: 96px;
   border-radius: 16px;
-  margin-right: 36px;
+  list-style-type: none;
+  float: left;
 }
 
 #current {
@@ -144,4 +166,22 @@ a:active {
 
 th.terrain, th.defense, th.movement {
   cursor: pointer;
+}
+
+.emdash::after {
+  content: '— ';
+}
+
+.figuredash::after {
+  content: '‒';
+}
+
+#browser {
+  display: none;
+  background-color: transparent;
+  color: #000;
+}
+
+.next {
+  cursor: pointer; 
 }
