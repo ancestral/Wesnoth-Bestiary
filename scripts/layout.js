@@ -218,6 +218,10 @@ $(function() {
     Bestiary.load();
   });
   
+  $('nav a').click(function() {
+    $('nav a').trigger('mouseenter');
+  })
+  
   $('nav a').mouseenter(function() {
     if (!$(this).hasClass('hovered') && !$(this).hasClass('selected')) {
       $('nav a').removeClass('hovered');
