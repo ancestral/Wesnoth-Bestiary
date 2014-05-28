@@ -136,7 +136,7 @@ var Bestiary = {
       $('#' + defenses[i] + ' th + td').html(Bestiary.adjustments[defenses[i]].defense);
       $('#' + defenses[i] + ' th + td + td').html(Bestiary.adjustments[defenses[i]].movement);
     }
-    $('#terrainadjustments').tablesorter({
+    $('#terrainadjustments').trigger('update').tablesorter({
       sortList: [[0,0]],
       headers: {
         0: {
