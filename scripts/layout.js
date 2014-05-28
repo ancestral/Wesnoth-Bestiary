@@ -219,8 +219,12 @@ $(function() {
   });
   
   $('nav a').click(function() {
-    $('nav a').trigger('mouseenter');
-  })
+    $(this).trigger('mouseenter');
+  });
+  
+  $('footer').click(function() {
+    window.open('https://github.com/ancestral/Wesnoth-Bestiary', '_self');
+  });
   
   $('nav a').mouseenter(function() {
     if (!$(this).hasClass('hovered') && !$(this).hasClass('selected')) {

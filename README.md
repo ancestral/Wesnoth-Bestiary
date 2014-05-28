@@ -11,6 +11,14 @@ Visit the Wesnoth forums, at:
 http://forums.wesnoth.org/viewtopic.php?f=6&t=29138
 
 ## Changelog
+Version 2 Beta 3
+* Added Khalifate and miscenllaenous units to browser.
+* Various fixes to nav bar.
+* Fixed alignment issue with unit &lt;li&gt; elements.
+* Tablesorter updates on new load.
+* Image-rendering blurring turned off.
+* optimizeLegibility reversed.
+
 Version 2 Beta 2
 * Updated licensing information. There is now a LICENSE.md file which
 contains information on all components.
