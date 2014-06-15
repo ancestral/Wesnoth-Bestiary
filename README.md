@@ -1,17 +1,36 @@
 # Wesnoth Bestiary
-A web site for browsing game and unit information for The Battle for Wesnoth
+A web site for browsing game and unit information for *The Battle for Wesnoth.*
 
-Bestiary has been overhauled. Consider this Version 2.
+**You can view it live at: http://wesnoth.io**
 
 ## What is Wesnoth Bestiary?
-This is a web site for browsing unit information for a free strategy game called The Battle For Wesnoth. (Not familiar? Check it out at http://www.wesnoth.org) Part of it is an experiment and self-learning to the wonderful ways of JavaScript, jquery, and web design. As I continue to work on the project, it will eventually replace http://units.wesnoth.org.
+This is a web site for browsing unit information for a free strategy game called *The Battle For Wesnoth.* (Not familiar? Check it out at http://www.wesnoth.org)
+
+As I continue to work on the project, the goal is it will eventually replace http://units.wesnoth.org.
+
+## Features
+* Rich, visual layout with unit portraits and icons
+* Navigable unit trees
+* Various stats for each unit, including sortablke terrain and resistance statistics
+* Dynamic AJAX loading and clean URLs
+* Automatic site generator for external server deployment
 
 ## Where can I learn more?
 Visit the Wesnoth forums, at:
-http://forums.wesnoth.org/viewtopic.php?f=6&t=29138
+http://r.wesnoth.org/t29138
 
 ## Changelog
-Version 2 Beta 3
+Version 0.5 (10)
+15 June 2014
+
+* Re-numbered versions historically. Numebring is now in the format “major.minor (build)”.
+* Updated Readme file.
+* Updated License file.
+* Font sizes are now almost all divisible by 7.
+
+Version 0.5 (9)
+27 May 2014
+
 * Added Khalifate and miscenllaenous units to browser.
 * Various fixes to nav bar.
 * Fixed alignment issue with unit &lt;li&gt; elements.
@@ -19,58 +38,63 @@ Version 2 Beta 3
 * Image-rendering blurring turned off.
 * optimizeLegibility reversed.
 
-Version 2 Beta 2
-* Updated licensing information. There is now a LICENSE.md file which
-contains information on all components.
+Version 0.4 (8)
+28 June 2013
+
+* Updated licensing information. There is now a LICENSE.md file which contains information on all components.
 * No longer using underscore.
 * Incorporated awesome tablesorter build by mottie!
-* Fixed table sorting issues. Name headers now are a static ascending
-sort, the rest correctly sort when clicked, and terrain without numbers
-always show at the botom.
-* Edited preflight so that it automates more content, including
-factions.
-* Included a unit browser. It’s not complete yet, but it is fully
-functional.
+* Fixed table sorting issues. Name headers now are a static ascending sort, the rest correctly sort when clicked, and terrain without numbers always show at the botom.
+* Edited preflight so that it automates more content, including factions.
+* Included a unit browser. It’s not complete yet, but it is fully functional.
 * Modified loading and url parsing behvior.
 * All sorts of other gooey, yummy bug fixes.
 
-Version 2 Beta 1
-* No PHP required. All dynamic loading is handled via JavaScript.
-* All data files are generated form a Python file, and have thus been
-removed.
+Version 0.3 (7)
+24 May 2014
 
-Version 2 Build 5
+* No PHP required. All dynamic loading is handled via JavaScript.
+* All data files are generated form a Python file, and have thus been removed.
+
+Version 0.2 (6)
+28 June 2012
+
 * Re-organized the template.
 * Using icon as portrait where there is none.
 
-Version 2 Build 4
+Version 0.2 (5)
 24 June 2012
+
 * Reworked layout. Stats are placed prominently earlier in the page now. Left and right divs (may be changed to sections later) are now fixed width.
 * Added preliminary support for advancement. Clicking on an advanced unit will load that unit’s page.
 * Fixed bug with defense exceptions showing under movement.
 * Removed footer.
 
-Version 2 Build 3a
+Version 0.2 (4)
 20 June 2012
+
 * Added support for portraits.
 * Removed logic for resizing. It’s all fluid, so things should just work.
 * Disabled links in nav for now.
 
-Version 2 Build 2b
+Version 0.2 (3)
 17 June 2012
+
 * Added attack and resistance icons.
 * Added support for attacks.
 * Added better CSS so things look nice.
 * Added a textured background.
 
-Version 2 Build 1
+Version 0.2 (2)
 16 June 2012
+
 * Renamed the project to Wesnoth Bestiary.
 * Completely re-designed Bestiary from the ground up.
 * Features will be added back in slowly, so as to get things right. Many things have changed; there are new APIs and more features enabled for popular browsers. I plan on leveraging this.
 
-Version 1 Build 1
+Version 0.1 (1)
 17 April 2011
+
 * First entire upload of the project.
 * Rebuilt Bestiary versus Wesnoth r49262.
 * Made changes to table formatting to prepare for table sorting.
@@ -79,14 +103,11 @@ Version 1 Build 1
 * Dynamic loading of manually typed URIs into a web browser’s address bar is broken.
 
 ## License
-Files in the data directory are licensed under GPL Version 2 as per The Battle for Wesnoth project.
-http://www.gnu.org/licenses/gpl-2.0.txt
-
-All other files are licensed under MIT.
+All files here are licensed under MIT.
 http://www.opensource.org/licenses/MIT
 
 
-Copyright © 2012 ancestral
+Copyright © 2014 ancestral
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

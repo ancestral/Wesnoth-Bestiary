@@ -15,7 +15,7 @@ h3 {
   border-bottom: 2px solid #544;
   margin-bottom: 8px;
   margin-top: 0px;
-  font-size: 24px;
+  font-size: 28px;
   color: #544;
 }
 
@@ -73,7 +73,7 @@ header {
 
 h1 {
   color: rgba(0,0,0,0.4);
-  font-size: 60px;
+  font-size: 56px;
   text-shadow: 0px 0px 6px #fed, 0px 0px #000;
   border-bottom: 2px solid #544;
   font-weight: bold;
@@ -89,7 +89,7 @@ h1 {
 }
 
 #attacks tbody tr td {
-  font-size: 36px;
+  font-size: 35px;
   padding-bottom: 12px;
 }
 
@@ -99,7 +99,7 @@ h1 {
 }
 
 #resistances tbody tr td {
-  font-size: 24px;
+  font-size: 28px;
   width: 72px;
   height: 67px;
 }
