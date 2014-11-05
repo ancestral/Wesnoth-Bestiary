@@ -11,16 +11,27 @@ As I continue to work on the project, the goal is it will eventually replace htt
 ## Features
 * Rich, visual layout with unit portraits and icons
 * Navigable unit trees
-* Various stats for each unit, including sortablke terrain and resistance statistics
+* Various stats for each unit, including sortable tabular data for terrain and resistance statistics
 * Dynamic AJAX loading and clean URLs
 * Automatic site generator for external server deployment
+
+## Work To Do
+* Build against trunk again (or just wait for 1.12 stable)
+* Display spinner animation while portraits are loading
+* Write code to build unit trees
+* Wire it to read existing eras and add-ons
 
 ## Where can I learn more?
 Visit the Wesnoth forums, at:
 http://r.wesnoth.org/t29138
 
 ## Changelog
-Version 0.5 (10)
+Version 0.5.2 (11)
+4 November 2014
+
+* Updated Readme file.
+
+Version 0.5.1 (10)
 15 June 2014
 
 * Re-numbered versions historically. Numebring is now in the format “major.minor (build)”.
@@ -56,13 +67,13 @@ Version 0.3 (7)
 * No PHP required. All dynamic loading is handled via JavaScript.
 * All data files are generated form a Python file, and have thus been removed.
 
-Version 0.2 (6)
+Version 0.2.4 (6)
 28 June 2012
 
 * Re-organized the template.
 * Using icon as portrait where there is none.
 
-Version 0.2 (5)
+Version 0.2.3 (5)
 24 June 2012
 
 * Reworked layout. Stats are placed prominently earlier in the page now. Left and right divs (may be changed to sections later) are now fixed width.
@@ -70,14 +81,14 @@ Version 0.2 (5)
 * Fixed bug with defense exceptions showing under movement.
 * Removed footer.
 
-Version 0.2 (4)
+Version 0.2.2 (4)
 20 June 2012
 
 * Added support for portraits.
 * Removed logic for resizing. It’s all fluid, so things should just work.
 * Disabled links in nav for now.
 
-Version 0.2 (3)
+Version 0.2.1 (3)
 17 June 2012
 
 * Added attack and resistance icons.
